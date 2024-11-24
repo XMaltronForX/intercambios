@@ -1,0 +1,7 @@
+<!-- programa_confirm_delete.html -->
+<h2>¿Estás seguro de que deseas eliminar este programa?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar Eliminación</button>
+</form>
+<a href="{% url 'programas_list' %}">Cancelar</a>

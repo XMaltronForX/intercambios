@@ -1,0 +1,11 @@
+<h2>Programas de Intercambio</h2>
+<a href="{% url 'programa_create' %}">Nuevo Programa</a>
+<ul>
+    {% for programa in object_list %}
+        <li>
+            nombre programa: {{ programa.nombre }}<br> fecha inicio:  {{ programa.fecha_inicio }} <br> hasta {{ programa.fecha_fin }} <hr>
+            <a href="{% url 'programa_edit' programa.pk %}">Editar</a>
+            <a href="{% url 'programa_delete' programa.pk %}">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
